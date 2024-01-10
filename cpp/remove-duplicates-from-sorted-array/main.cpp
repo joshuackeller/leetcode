@@ -18,9 +18,16 @@ public:
             if (nums[uniqueIndex] != numsCopy[i])
             {
                 uniqueIndex++;
-                nums.insert(nums.begin() + uniqueIndex, numsCopy[i]);
+                nums[uniqueIndex] = numsCopy[i];
             }
         }
+
+        cout << "start\n";
+        for (int i = 0; i < nums.size(); i++)
+        {
+            cout << nums[i] << "\n";
+        }
+        cout << "end\n";
 
         return uniqueIndex + 1;
     }
