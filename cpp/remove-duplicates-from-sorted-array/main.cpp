@@ -22,12 +22,13 @@ public:
             }
         }
 
-        cout << "start\n";
-        for (int i = 0; i < nums.size(); i++)
-        {
-            cout << nums[i] << "\n";
-        }
-        cout << "end\n";
+        // FOR TESTING
+        // cout << "start\n";
+        // for (int i = 0; i < nums.size(); i++)
+        // {
+        //     cout << nums[i] << "\n";
+        // }
+        // cout << "end\n";
 
         return uniqueIndex + 1;
     }
