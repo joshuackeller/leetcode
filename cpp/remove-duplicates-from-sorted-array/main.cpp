@@ -12,13 +12,14 @@ public:
     {
         int uniqueIndex = 0;
 
-        vector<int> numsCopy = nums;
-        for (int i = 1; i < numsCopy.size(); i++)
+        // vector<int> numsCopy = nums;
+        int size = nums.size();
+        for (int i = 1; i < size; i++)
         {
-            if (nums[uniqueIndex] != numsCopy[i])
+            if (nums[uniqueIndex] != nums[i])
             {
                 uniqueIndex++;
-                nums[uniqueIndex] = numsCopy[i];
+                nums[uniqueIndex] = nums[i];
             }
         }
 
