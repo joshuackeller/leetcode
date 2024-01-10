@@ -12,7 +12,6 @@ public:
     {
         int uniqueIndex = 0;
 
-        // vector<int> numsCopy = nums;
         int size = nums.size();
         for (int i = 1; i < size; i++)
         {
