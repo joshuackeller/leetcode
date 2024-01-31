@@ -11,7 +11,7 @@ impl ListNode {
     }
 }
 fn main() {
-    // SOLUTION #3
+    // SOLUTION #3 - RECURSIVE
     // fn do_this(
     //     new: Option<Box<ListNode>>,
     //     previous: Option<Box<ListNode>>,
@@ -30,7 +30,8 @@ fn main() {
     // fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     //     return do_this(head, None);
     // }
-    // SOLUTION #2
+
+    // SOLUTION #2 - RECURSIVE
     // fn do_this( new: Option<Box<ListNode>>, previous: Option<Box<ListNode>>,) -> Option<Box<ListNode>> {
     // if let Some(node) = new { return do_this(
     //             node.next,
@@ -47,7 +48,7 @@ fn main() {
     //     return do_this(head, None);
     // }
 
-    // SOLUTION #1 -- fastest and most memory efficient
+    // SOLUTION #1 -- New List
     fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut new_list: Option<Box<ListNode>>;
         if let Some(node) = head {
