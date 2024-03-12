@@ -32,6 +32,7 @@ impl Solution {
         if let Some(r) = root {
             let rb = r.borrow();
             let new_sum: i32 = rb.val + running_sum;
+
             if rb.left.is_some()
                 && Solution::test_tree(rb.left.clone(), target_sum, new_sum) == true
             {
@@ -42,7 +43,7 @@ impl Solution {
             {
                 return true;
             }
-            if rb.right.is_none() && rb.left.is_none() && target_sum == new_sum {
+            if target_sum == new_sum {
                 return true;
             } else {
                 return false;
