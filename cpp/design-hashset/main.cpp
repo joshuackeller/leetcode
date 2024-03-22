@@ -43,12 +43,12 @@ int main() {
 //   int *array;
 //   int size = 0;
 //   int capacity = 2;
-//
+
 //   int hash(int key) { return key % capacity; }
 //   void rehash() {
 //     int *previousArray = array;
 //     int previousCapacity = capacity;
-//
+
 //     if ((capacity / 2) <= size) {
 //       capacity = capacity * 2;
 //     }
@@ -57,14 +57,14 @@ int main() {
 //     for (int x = 0; x < capacity; x++) {
 //       array[x] = -1;
 //     }
-//
+
 //     for (int x = 0; x < previousCapacity; x++) {
 //       if (previousArray[x] != -1) {
 //         add(previousArray[x]);
 //       }
 //     }
 //   }
-//
+
 // public:
 //   MyHashSet() {
 //     array = new int[capacity];
@@ -72,10 +72,10 @@ int main() {
 //       array[x] = -1;
 //     }
 //   }
-//
+
 //   void add(int key) {
 //     int index = hash(key);
-//
+
 //     while (true) {
 //       if (array[index] == -1) {
 //         array[index] = key;
@@ -88,17 +88,17 @@ int main() {
 //         }
 //       }
 //     }
-//
+
 //     size += 1;
-//
+
 //     if ((size * 2) >= capacity) {
 //       rehash();
 //     }
 //   }
-//
+
 //   void remove(int key) {
 //     int index = hash(key);
-//
+
 //     while (true) {
 //       if (array[index] == -1) {
 //         break;
@@ -111,12 +111,12 @@ int main() {
 //         }
 //       }
 //     }
-//
+
 //     size -= 1;
-//
+
 //     rehash();
 //   }
-//
+
 //   bool contains(int key) {
 //     int index = hash(key);
 //     while (true) {
@@ -132,7 +132,7 @@ int main() {
 //     }
 //     return true;
 //   }
-//
+
 //   void print() {
 //     for (int x = 0; x < capacity; x++) {
 //       cout << array[x] << ", ";
