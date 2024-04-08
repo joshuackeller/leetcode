@@ -1,5 +1,3 @@
-use std::collections::VecDeque;
-
 pub struct Solution;
 
 impl Solution {
@@ -10,15 +8,14 @@ impl Solution {
         let mut current_sa = 0;
 
         for _ in 0..students.len() {
-            if sandwiches[current_sa] == 1 && st_square == 0 {
-                return st_circle;
-            } else if sandwiches[current_sa] == 0 && st_circle == 0 {
-                return st_square;
-            }
-            if sandwiches[current_sa] == 1 {
+            if sandwiches[current_sa] == 1 && st_square > 0 {
                 st_square -= 1;
-            } else {
+            } else if sandwiches[current_sa] == 0 && st_circle > 0 {
                 st_circle -= 1;
+            } else if st_square == 0 {
+                return st_circle;
+            } else {
+                return st_square;
             }
             current_sa += 1;
         }
