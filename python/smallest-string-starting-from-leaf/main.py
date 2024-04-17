@@ -12,9 +12,6 @@ class Solution:
         return self.solve(root, "") 
     
     def solve(self, root: Optional[TreeNode], cur) -> str:
-        if not root.left and not root.right:
-            return chr(ord("a") + root.val) + cur
-        
         cur = chr(ord("a") + root.val) + cur
 
         if root.left and root.right:
@@ -24,6 +21,8 @@ class Solution:
             return self.solve(root.left, cur)
         if root.right:
             return self.solve(root.right, cur)
+        
+        return cur
 
 
 # [25,1,null,0,0,1,null,null,null,0]
