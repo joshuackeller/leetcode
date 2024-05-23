@@ -1,11 +1,7 @@
 from typing import List
 import random
-import sys
-
-sys.setrecursionlimit(100000)
 
 
-# Quick Select w/ Random Pivot and removes equal values
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         def quickSelect(nums: List[int], k: int) -> int:
