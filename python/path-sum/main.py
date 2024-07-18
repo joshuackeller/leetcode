@@ -1,34 +1,32 @@
 from typing import Optional
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
+
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        def solve(root: Optional[TreeNode], targetSum: int, runningSum: int) -> bool:
-            if not root:
-                return False
-
-            runningSum += root.val 
-
-            if not root.left and not root.right:
-                return runningSum == targetSum
-
-            if solve(root.left, targetSum, runningSum):
-                return True
-            if solve(root.right, targetSum, runningSum):
-                return True
-
+        if not root:
             return False
-        
-        return solve(root, targetSum, 0)
 
-s = Solution();
+        targetSum -= root.val
 
-root = TreeNode(1, TreeNode(2), TreeNode(3))
+        if not root.left and not root.right and targetSum == 0:
+            return True
+        if self.hasPathSum(root.left, targetSum):
+            return True
+        if self.hasPathSum(root.right, targetSum):
+            return True
 
-print(s.hasPathSum(root, 3));
+        return False
 
+
+s = Solution()
+
+root = TreeNode(1, TreeNode(2))
+
+print(s.hasPathSum(root, 3))
